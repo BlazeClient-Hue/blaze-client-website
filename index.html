@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Blaze Client herunterladen.">
+  <title>Blaze Client</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#191919;background:#fff;font-synthesis:none;text-rendering:optimizeLegibility}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(180deg,#fff 0%,#fff 70%,#fff8f3 100%);display:flex;flex-direction:column}
+    .top{width:min(1080px,calc(100% - 44px));margin:0 auto;height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f0efed}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#171717;font-weight:750;letter-spacing:.025em}.brand img{width:43px;height:43px;border-radius:13px;object-fit:cover}.brand span{font-size:16px}
+    .navlink{font-size:14px;color:#555;text-decoration:none}.navlink:hover{color:#ee571e}
+    main{flex:1;display:grid;place-items:center;padding:66px 22px 80px}.hero{width:min(740px,100%);text-align:center}.hero-icon{height:112px;width:112px;object-fit:cover;border-radius:29px;box-shadow:0 12px 35px #30130d1a;margin-bottom:28px}
+    .eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#e85120}.hero h1{font-size:clamp(45px,8vw,76px);line-height:1.04;letter-spacing:-.065em;margin:0 0 18px;color:#171717}.hero p{font-size:18px;line-height:1.7;color:#6e6e6e;margin:0 auto;max-width:530px}
+    .download{display:inline-flex;align-items:center;justify-content:center;gap:12px;margin-top:32px;padding:16px 25px;border-radius:13px;background:#ef571e;color:#fff;text-decoration:none;font-size:16px;font-weight:750;box-shadow:0 8px 20px #ef571e33;transition:transform .18s,box-shadow .18s}.download:hover{transform:translateY(-2px);box-shadow:0 12px 25px #ef571e45}.download:focus-visible{outline:3px solid #222;outline-offset:4px}.arrow{font-size:20px;line-height:1}
+    .detail{font-size:13px!important;color:#999!important;margin-top:15px!important}.foot{width:min(1080px,calc(100% - 44px));margin:0 auto;padding:22px 0;border-top:1px solid #f0efed;display:flex;justify-content:space-between;gap:14px;color:#999;font-size:12px}
+    @media(max-width:520px){.top{height:72px}.hero-icon{width:96px;height:96px}.hero p{font-size:16px}.foot{flex-direction:column;text-align:center}.download{width:100%;max-width:330px}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./" aria-label="Blaze Client Startseite"><img src="blaze-icon.png" alt=""><span>BLAZE CLIENT</span></a>
+    <a class="navlink" href="#download">Download</a>
+  </header>
+  <main>
+    <section class="hero">
+      <img class="hero-icon" src="blaze-icon.png" alt="Blaze Client Icon">
+      <div class="eyebrow">Minecraft Launcher</div>
+      <h1>Blaze Client</h1>
+      <p>Starte dein nächstes Abenteuer. Lade Blaze Client für Windows herunter und leg los.</p>
+      <a class="download" id="download" href="BlazeClient-Setup.exe" download>
+        <span>Blaze Client herunterladen</span><span class="arrow" aria-hidden="true">↓</span>
+      </a>
+      <p class="detail">Windows · Installer-Datei</p>
+    </section>
+  </main>
+  <footer class="foot"><span>© <span id="year"></span> Blaze Client</span><span>Unabhängiges Projekt</span></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
